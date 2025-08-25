@@ -1,0 +1,135 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background: url('images/header-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.site-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.site-header p {
+  font-size: 1.2rem;
+}
+
+/* ===== Navigation (Flexbox) ===== */
+.site-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #2c3e50;
+  padding: 0.8rem;
+}
+.site-nav li {
+  margin: 0 1rem;
+}
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.site-nav a:hover {
+  color: #1abc9c;
+}
+
+/* ===== Main Layout (Grid) ===== */
+.site-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* ===== Content Area ===== */
+.content {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== Cards (Flexbox) ===== */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1 1 250px;
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  background: #ecf0f1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.sidebar h2 {
+  margin-bottom: 0.5rem;
+}
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 768px) {
+  .site-main {
+    grid-template-columns: 1fr;
+  }
+  .card-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .site-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .site-nav li {
+    margin: 0.5rem 0;
+  }
+}
